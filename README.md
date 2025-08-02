@@ -1,16 +1,48 @@
 # mcp-md-templates
 
-An MCP server for managing and utilizing Markdown templates. You can manage various document templates such as meeting minutes, project proposals, bug reports, and daily standups in Markdown format and use them in connection with LLMs.
+An MCP server for managing and utilizing Markdown templates.
+You can manage various document templates such as meeting minutes, project proposals, bug reports, and daily standups in Markdown format and use them in connection with LLMs.
 
 ## Main Features
 
 ### 1. Using Templates
-Retrieve and use existing Markdown templates for various documentation needs.
+Retrieve and use existing templates
 
 ### 2. Registering Templates
-Register new custom Markdown templates to expand your template library.
+Register new templates
 
 ## Installation
+
+### Using Docker
+
+1. Pull Docker image
+```bash
+docker pull yourusername/mcp-md-templates
+```
+
+2. Configuration example (claude_desktop_config.json)
+```json
+{
+  "mcpServers": {
+    "md-templates": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "YOUR_TEMPLATES_DIR:/app/resources",
+        "-e",
+        "READ_ONLY",
+        "yourusername/mcp-md-templates"
+      ],
+      "env": {
+        "READ_ONLY": "false"
+      }
+    }
+  }
+}
+```
 
 ### Using npx
 
@@ -33,7 +65,52 @@ Configuration example (claude_desktop_config.json):
 }
 ```
 
-### Using Node.js directly
+## Environment Variables
+
+> **Note**: When using Docker, the template directory must be specified using Docker volume mount (`-v YOUR_TEMPLATES_DIR:/app/resources`) instead of environment variables.
+
+| Variable Name | Description | Default Value |
+|--------------|-------------|---------------|
+| READ_ONLY | Whether to allow adding/modifying templates | false |
+| TEMPLATES_DIR | Path to directory where template files are stored | - |
+
+## For Developers
+
+### Building and Managing Docker Images
+
+```bash
+# Build Docker image
+make docker-build
+
+# Remove Docker image
+make docker-clean
+```
+
+Development configuration example (claude_desktop_config.json):
+```json
+{
+  "mcpServers": {
+    "md-templates": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "YOUR_TEMPLATES_DIR:/app/resources",
+        "-e",
+        "READ_ONLY",
+        "mcp-md-templates"
+      ],
+      "env": {
+        "READ_ONLY": false
+      }
+    }
+  }
+}
+```
+
+### Building from source
 
 1. Clone the repository:
 ```bash
@@ -51,7 +128,7 @@ npm install
 npm run build
 ```
 
-4. Configure in claude_desktop_config.json:
+Development configuration example (claude_desktop_config.json):
 ```json
 {
   "mcpServers": {
@@ -69,72 +146,6 @@ npm run build
 }
 ```
 
-## Environment Variables
-
-| Variable Name | Description | Default Value |
-|--------------|-------------|---------------|
-| READ_ONLY | Whether to allow adding/modifying templates | false |
-| TEMPLATES_DIR | Path to directory where template files are stored | ./resources |
-
-## Available Templates
-
-The following templates are included by default:
-
-1. **meeting-minutes** - Standard meeting minutes template
-2. **project-proposal** - Comprehensive project proposal template
-3. **bug-report** - Detailed bug report template
-4. **daily-standup** - Daily standup meeting notes template
-
-## Usage Examples
-
-### Getting a Template
-
-Use the `get_template` tool to retrieve a Markdown template:
-
-```
-Tool: get_template
-Arguments: {
-  "style": "meeting-minutes"
-}
-```
-
-### Registering a New Template
-
-Use the `register_template` tool to add a new Markdown template:
-
-```
-Tool: register_template
-Arguments: {
-  "stylename": "code-review",
-  "markdown": "# Code Review\n\n**PR Title:** ...\n**Author:** ...\n..."
-}
-```
-
-## For Developers
-
-### Project Structure
-
-```
-mcp-md-templates/
-├── src/
-│   ├── index.ts      # Entry point
-│   └── templates.ts  # Main server implementation
-├── resources/        # Default template directory
-│   ├── meeting-minutes.md
-│   ├── project-proposal.md
-│   ├── bug-report.md
-│   └── daily-standup.md
-├── package.json
-├── tsconfig.json
-└── README.md
-```
-
-### Building
-
-```bash
-npm run build
-```
-
 ## License
 
-This project is released under the MIT License.
+This project is released under the MIT License. See [LICENSE](LICENSE) file for details.

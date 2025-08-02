@@ -1,88 +1,88 @@
-# Bug Report
+# バグレポート
 
-**Bug ID:** BUG-[NUMBER]  
-**Date Reported:** [YYYY-MM-DD]  
-**Reporter:** [Your Name]  
-**Severity:** 🔴 Critical / 🟡 Major / 🟢 Minor
+**バグID:** BUG-[NUMBER]  
+**報告日:** [YYYY-MM-DD]  
+**報告者:** [Your Name]  
+**重要度:** 🔴 重大 / 🟡 高 / 🟢 低
 
-## Summary
+## 概要
 
-**Title:** [Brief, descriptive title of the bug]
+**タイトル:** [バグの簡潔で説明的なタイトル]
 
-**Description:**  
-[Provide a clear and concise description of the bug]
+**説明:**  
+[バグの明確で簡潔な説明を記載してください]
 
-## Environment
+## 環境
 
-- **OS:** [e.g., Windows 11, macOS 14.0, Ubuntu 22.04]
-- **Browser/App Version:** [e.g., Chrome 120.0, App v2.5.0]
-- **Device:** [e.g., Desktop, iPhone 14, Samsung Galaxy S23]
-- **Environment:** [Production/Staging/Development]
+- **OS:** [例: Windows 11, macOS 14.0, Ubuntu 22.04]
+- **ブラウザ/アプリバージョン:** [例: Chrome 120.0, App v2.5.0]
+- **デバイス:** [例: Desktop, iPhone 14, Samsung Galaxy S23]
+- **環境:** [本番/ステージング/開発]
 
-## Steps to Reproduce
+## 再現手順
 
-1. [First step]
-2. [Second step]
-3. [Third step]
-4. [Continue as needed...]
+1. [最初の手順]
+2. [2番目の手順]
+3. [3番目の手順]
+4. [必要に応じて続ける...]
 
-## Expected Behavior
+## 期待される動作
 
-[Describe what you expected to happen]
+[期待していた動作を記載]
 
-## Actual Behavior
+## 実際の動作
 
-[Describe what actually happened]
+[実際に起きた動作を記載]
 
-## Visual Evidence
+## 視覚的証拠
 
-### Screenshots
-[Attach screenshots if applicable]
+### スクリーンショット
+[該当する場合はスクリーンショットを添付]
 
-### Error Messages
+### エラーメッセージ
 ```
-[Paste any error messages here]
-```
-
-### Logs
-```
-[Paste relevant log entries here]
+[エラーメッセージをここに貼り付け]
 ```
 
-## Impact
+### ログ
+```
+[関連するログエントリをここに貼り付け]
+```
 
-### Affected Users
-- [ ] All users
-- [ ] Specific user group: [Specify]
-- [ ] Single user
+## 影響範囲
 
-### Business Impact
-[Describe how this bug affects business operations or user experience]
+### 影響を受けるユーザー
+- [ ] 全ユーザー
+- [ ] 特定のユーザーグループ: [詳細を記載]
+- [ ] 単一ユーザー
 
-## Additional Information
+### ビジネスへの影響
+[このバグがビジネス運営やユーザー体験にどのように影響するかを記載]
 
-### Workaround
-[If a temporary workaround exists, describe it here]
+## 追加情報
 
-### Related Issues
-- [Link to related issue #1]
-- [Link to related issue #2]
+### 回避策
+[一時的な回避策がある場合は、ここに記載]
 
-### Notes
-[Any additional context or information that might be helpful]
+### 関連する問題
+- [関連する問題 #1へのリンク]
+- [関連する問題 #2へのリンク]
+
+### 備考
+[役立つ可能性のある追加のコンテキストや情報]
 
 ---
 
-## For Development Team
+## 開発チーム用
 
-### Root Cause Analysis
-[To be filled by development team]
+### 根本原因分析
+[開発チームが記入]
 
-### Solution
-[To be filled by development team]
+### 解決策
+[開発チームが記入]
 
-### Fix Version
-[Version where the fix will be deployed]
+### 修正バージョン
+[修正がデプロイされるバージョン]
 
-### Verification Steps
-[Steps to verify the fix]
+### 検証手順
+[修正を検証するための手順]

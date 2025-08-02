@@ -6,10 +6,10 @@ Markdownテンプレートを管理・活用するためのMCPサーバーです
 ## 主な機能
 
 ### 1. テンプレートの利用
-既存のMarkdownテンプレートを取得して、各種ドキュメント作成に活用できます。
+既存のテンプレートを取得して活用
 
 ### 2. テンプレートの登録
-新しいカスタムテンプレートを登録して、テンプレートライブラリを拡張できます。
+新しいテンプレートを登録
 
 ## インストール
 
@@ -34,7 +34,16 @@ Markdownテンプレートを管理・活用するためのMCPサーバーです
 }
 ```
 
-### Node.jsで直接実行する場合
+## 環境変数
+
+| 変数名 | 説明 | デフォルト値 |
+|--------|------|--------------|
+| READ_ONLY | テンプレートの追加・変更を許可するかどうか | false |
+| TEMPLATES_DIR | テンプレートファイルを保存するディレクトリのパス | - |
+
+## 開発者向け
+
+### ソースからビルド
 
 1. リポジトリをクローン:
 ```bash
@@ -52,7 +61,7 @@ npm install
 npm run build
 ```
 
-4. claude_desktop_config.jsonに設定:
+開発用設定例 (claude_desktop_config.json):
 ```json
 {
   "mcpServers": {
@@ -70,72 +79,6 @@ npm run build
 }
 ```
 
-## 環境変数
-
-| 変数名 | 説明 | デフォルト値 |
-|--------|------|--------------|
-| READ_ONLY | テンプレートの追加・変更を許可するかどうか | false |
-| TEMPLATES_DIR | テンプレートファイルを保存するディレクトリのパス | ./resources |
-
-## 利用可能なテンプレート
-
-デフォルトで以下のテンプレートが含まれています：
-
-1. **meeting-minutes** - 標準的な会議議事録テンプレート
-2. **project-proposal** - 包括的なプロジェクト提案書テンプレート
-3. **bug-report** - 詳細なバグレポートテンプレート
-4. **daily-standup** - デイリースタンドアップミーティングメモテンプレート
-
-## 使用例
-
-### テンプレートの取得
-
-`get_template`ツールを使用してMarkdownテンプレートを取得します：
-
-```
-Tool: get_template
-Arguments: {
-  "style": "meeting-minutes"
-}
-```
-
-### 新しいテンプレートの登録
-
-`register_template`ツールを使用して新しいMarkdownテンプレートを追加します：
-
-```
-Tool: register_template
-Arguments: {
-  "stylename": "code-review",
-  "markdown": "# コードレビュー\n\n**PRタイトル:** ...\n**作成者:** ...\n..."
-}
-```
-
-## 開発者向け情報
-
-### プロジェクト構造
-
-```
-mcp-md-templates/
-├── src/
-│   ├── index.ts      # エントリーポイント
-│   └── templates.ts  # メインサーバー実装
-├── resources/        # デフォルトテンプレートディレクトリ
-│   ├── meeting-minutes.md
-│   ├── project-proposal.md
-│   ├── bug-report.md
-│   └── daily-standup.md
-├── package.json
-├── tsconfig.json
-└── README.md
-```
-
-### ビルド
-
-```bash
-npm run build
-```
-
 ## ライセンス
 
-このプロジェクトはMITライセンスの下でリリースされています。
+このプロジェクトはMITライセンスの下でリリースされています。詳細は[LICENSE](LICENSE)ファイルを参照してください。

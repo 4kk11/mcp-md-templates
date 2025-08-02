@@ -1,87 +1,87 @@
-# Daily Standup - [Team Name]
+# デイリースタンドアップ - [Team Name]
 
-**Date:** [YYYY-MM-DD]  
-**Sprint:** [Sprint Number/Name]  
-**Day:** [Day X of Sprint]
+**日付:** [YYYY-MM-DD]  
+**スプリント:** [Sprint Number/Name]  
+**スプリント日数:** [Day X of Sprint]
 
-## Team Updates
+## チーム更新
 
 ### [Team Member 1]
 
-**Yesterday:**
-- ✅ [Completed task 1]
-- ✅ [Completed task 2]
-- 🔄 [In progress task]
+**昨日の実績:**
+- ✅ [完了したタスク1]
+- ✅ [完了したタスク2]
+- 🔄 [進行中のタスク]
 
-**Today:**
-- [ ] [Planned task 1]
-- [ ] [Planned task 2]
-- [ ] [Planned task 3]
+**今日の予定:**
+- [ ] [予定タスク1]
+- [ ] [予定タスク2]
+- [ ] [予定タスク3]
 
-**Blockers:**
-- 🚫 [Blocker description] - Need help from [Person/Team]
+**ブロッカー:**
+- 🚫 [ブロッカーの説明] - [Person/Team]からのサポートが必要
 
 ---
 
 ### [Team Member 2]
 
-**Yesterday:**
-- ✅ [Completed task 1]
-- ✅ [Completed task 2]
+**昨日の実績:**
+- ✅ [完了したタスク1]
+- ✅ [完了したタスク2]
 
-**Today:**
-- [ ] [Planned task 1]
-- [ ] [Planned task 2]
+**今日の予定:**
+- [ ] [予定タスク1]
+- [ ] [予定タスク2]
 
-**Blockers:**
-- None
+**ブロッカー:**
+- なし
 
 ---
 
 ### [Team Member 3]
 
-**Yesterday:**
-- ✅ [Completed task 1]
-- 🔄 [In progress task]
+**昨日の実績:**
+- ✅ [完了したタスク1]
+- 🔄 [進行中のタスク]
 
-**Today:**
-- [ ] Continue [In progress task]
-- [ ] [Planned task 2]
+**今日の予定:**
+- [ ] [進行中のタスク]の続き
+- [ ] [予定タスク2]
 
-**Blockers:**
-- ⚠️ Waiting for API documentation from backend team
+**ブロッカー:**
+- ⚠️ バックエンドチームからのAPIドキュメント待ち
 
 ---
 
-## Sprint Progress
+## スプリント進捗
 
-### Burndown Status
-- **Story Points Completed:** [X/Y]
-- **Tasks Completed:** [X/Y]
-- **On Track:** Yes/No
+### バーンダウン状況
+- **完了ストーリーポイント:** [X/Y]
+- **完了タスク数:** [X/Y]
+- **予定通り:** はい/いいえ
 
-### Key Metrics
-- **Velocity:** [Current velocity]
-- **Impediments:** [Number of blockers]
-- **Risk Items:** [Number of risks]
+### 主要指標
+- **ベロシティ:** [Current velocity]
+- **障害数:** [Number of blockers]
+- **リスク項目:** [Number of risks]
 
-## Team Announcements
+## チームからのお知らせ
 
-- 📅 [Upcoming meeting or deadline]
-- 🎯 [Important reminder or focus area]
-- 🎉 [Team achievement or recognition]
+- 📅 [今後の会議や締切]
+- 🎯 [重要なリマインダーや注力エリア]
+- 🎉 [チームの成果や表彰]
 
-## Action Items
+## アクションアイテム
 
-| Action | Owner | Due Date |
-|--------|-------|----------|
+| アクション | 担当者 | 期限 |
+|-----------|--------|------|
 | [Action 1] | [Name] | [Date] |
 | [Action 2] | [Name] | [Date] |
 
-## Notes
+## 備考
 
-[Any additional notes or discussion points from the standup]
+[スタンドアップからの追加のメモや議論ポイント]
 
 ---
 
-*Next Standup: [Date and Time]*
+*次回スタンドアップ: [Date and Time]*
