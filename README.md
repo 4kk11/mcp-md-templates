@@ -128,23 +128,6 @@ npm install
 npm run build
 ```
 
-Development configuration example (claude_desktop_config.json):
-```json
-{
-  "mcpServers": {
-    "md-templates": {
-      "command": "node",
-      "args": [
-        "/path/to/mcp-md-templates/build/index.js"
-      ],
-      "env": {
-        "READ_ONLY": "false",
-        "TEMPLATES_DIR": "YOUR_TEMPLATES_DIR"
-      }
-    }
-  }
-}
-```
 
 ## License
 

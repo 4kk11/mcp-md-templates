@@ -13,6 +13,37 @@ Markdownテンプレートを管理・活用するためのMCPサーバーです
 
 ## インストール
 
+### Dockerを使用する場合
+
+1. Dockerイメージをプル
+```bash
+docker pull yourusername/mcp-md-templates
+```
+
+2. 設定例 (claude_desktop_config.json)
+```json
+{
+  "mcpServers": {
+    "md-templates": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "YOUR_TEMPLATES_DIR:/app/resources",
+        "-e",
+        "READ_ONLY",
+        "yourusername/mcp-md-templates"
+      ],
+      "env": {
+        "READ_ONLY": "false"
+      }
+    }
+  }
+}
+```
+
 ### npxを使用する場合
 
 設定例 (claude_desktop_config.json):
@@ -36,12 +67,48 @@ Markdownテンプレートを管理・活用するためのMCPサーバーです
 
 ## 環境変数
 
+> **注意**: Dockerを使用する場合、テンプレートディレクトリは環境変数ではなく、Dockerボリュームマウント（`-v YOUR_TEMPLATES_DIR:/app/resources`）を使用して指定する必要があります。
+
 | 変数名 | 説明 | デフォルト値 |
 |--------|------|--------------|
 | READ_ONLY | テンプレートの追加・変更を許可するかどうか | false |
 | TEMPLATES_DIR | テンプレートファイルを保存するディレクトリのパス | - |
 
 ## 開発者向け
+
+### Dockerイメージのビルドと管理
+
+```bash
+# Dockerイメージをビルド
+make docker-build
+
+# Dockerイメージを削除
+make docker-clean
+```
+
+開発用設定例 (claude_desktop_config.json):
+```json
+{
+  "mcpServers": {
+    "md-templates": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "YOUR_TEMPLATES_DIR:/app/resources",
+        "-e",
+        "READ_ONLY",
+        "mcp-md-templates"
+      ],
+      "env": {
+        "READ_ONLY": false
+      }
+    }
+  }
+}
+```
 
 ### ソースからビルド
 
@@ -61,23 +128,6 @@ npm install
 npm run build
 ```
 
-開発用設定例 (claude_desktop_config.json):
-```json
-{
-  "mcpServers": {
-    "md-templates": {
-      "command": "node",
-      "args": [
-        "/path/to/mcp-md-templates/build/index.js"
-      ],
-      "env": {
-        "READ_ONLY": "false",
-        "TEMPLATES_DIR": "YOUR_TEMPLATES_DIR"
-      }
-    }
-  }
-}
-```
 
 ## ライセンス
 

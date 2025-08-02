@@ -1,0 +1,15 @@
+node_modules
+build
+dist
+.git
+.gitignore
+.DS_Store
+*.log
+.env
+.env.*
+README.md
+README.ja.md
+LICENSE
+Makefile
+Dockerfile
+.dockerignore
