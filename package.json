@@ -1,0 +1,30 @@
+{
+  "name": "mcp-md-templates",
+  "version": "1.0.0",
+  "description": "Markdown template creation and management tool",
+  "main": "./build/index.js",
+  "keywords": ["mcp", "markdown", "templates"],
+  "author": "Your Name",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-md-templates": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js"
+  },
+  "files": [
+    "build",
+    "build/**/*.d.ts",
+    "resources"
+  ],
+  "private": false,
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "^5.8.3"
+  }
+}

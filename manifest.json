@@ -1,0 +1,35 @@
+{
+  "name": "mcp-md-templates",
+  "version": "1.0.0",
+  "description": "Markdown template creation and management tool",
+  "author": {
+    "name": "Your Name"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "./build/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/./build/index.js"
+      ],
+      "env": {}
+    }
+  },
+  "tools": [
+    {
+      "name": "get_template",
+      "description": "Retrieve Markdown templates"
+    },
+    {
+      "name": "register_template", 
+      "description": "Register new Markdown templates"
+    }
+  ],
+  "keywords": [
+    "markdown",
+    "templates",
+    "documentation"
+  ],
+  "license": "MIT"
+}
